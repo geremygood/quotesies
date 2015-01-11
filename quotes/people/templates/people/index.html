@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if latest_quotes_list %}
+        <ul>
+        {% for quote in latest_quotes_list %}
+            <li><a href="{% url 'quote_detail' quote.person.id quote.id %}">{{ quote.quote_text }}</a> – <a href="{% url 'person_detail' quote.person.id %}">{{ quote.person }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No quotes are available.</p>
+    {% endif %}
+
+{% endblock content %}

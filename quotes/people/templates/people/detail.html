@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+    <h2><a target="_blank" href="{{ person.wiki }}">{{ person }}</a></h2>
+
+    {% if quotes %}
+        <ul>
+        {% for quote in quotes %}
+            <li><a href="{% url 'quote_detail' quote.person.id quote.id %}">{{ quote.quote_text }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No quotes are available.</p>
+    {% endif %}
+
+{% endblock content %}

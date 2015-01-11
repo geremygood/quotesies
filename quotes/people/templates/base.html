@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>{% block title %}Quotesi.es{% endblock title %}</title>
+
+    <style>
+        html{
+            color: #fafafa;
+            background-color: #333;
+            text-align: center;
+            font-size: 24px;
+            font-family:"Futura", serif;
+            padding: 100px;
+        }
+        a{
+            color: #fafafa;
+            text-decoration: none;
+        }
+        a:hover{
+            border-bottom: solid 1px;
+        }
+        h1{font-family: Cooper Black, Arial Black, Sans-Serif; font-size: 48px;}
+        h2{font-weight: 100;}
+        li{
+            list-style: none;
+            padding: 1em;
+        }
+        ul{
+            margin: 0;
+            padding: 0;
+        }
+        footer{
+            font-size: 12px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            padding: 24px;
+        }
+    </style>
+</head>
+<body>
+
+{% block content %}
+
+{% endblock content %}
+
+{% block footer %}
+<footer>
+    made by Geremy & Darrin
+</footer>
+{% endblock footer %}
+</body>
+</html>
