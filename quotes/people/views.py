@@ -13,7 +13,7 @@ def index(request):
     return render(request, 'people/quote_detail.html', context)
 
 def quotes_list(request):
-    latest_quotes_list = Quote.objects.order_by('-pub_date')[:5]
+    latest_quotes_list = Quote.objects.order_by('-pub_date')[:50]
     context = {'latest_quotes_list': latest_quotes_list}
     return render(request, 'people/index.html', context)
 

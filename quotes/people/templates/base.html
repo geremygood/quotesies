@@ -8,8 +8,8 @@
             background-color: #333;
             text-align: center;
             font-size: 24px;
+            padding-top: 24px;
             font-family:"Futura", serif;
-            padding: 100px;
         }
         a{
             color: #fafafa;
@@ -18,11 +18,24 @@
         a:hover{
             border-bottom: solid 1px;
         }
-        h1{font-family: Cooper Black, Arial Black, Sans-Serif; font-size: 48px;}
-        h2{font-weight: 100;}
+        .quote{
+            font-family: Cooper Black, Arial Black, Sans-Serif;
+            font-size: 48px;
+            font-weight: 100;
+            padding: 100px;
+        }
+        .source{
+            font-size: 12px;
+
+        }
+        .person{font-weight: 100;}
         li{
             list-style: none;
-            padding: 1em;
+            padding: 100px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 48px;
+            font-family: Cooper Black, Arial Black, Sans-Serif;
         }
         ul{
             margin: 0;
@@ -30,15 +43,24 @@
         }
         footer{
             font-size: 12px;
-            position: absolute;
+            position: fixed;
             bottom: 0;
             right: 0;
             padding: 24px;
         }
+        .logo{
+            position: absolute;
+            font-family: Cooper Black, Arial Black, Sans-Serif;
+            font-size: 24px;
+            left: 24px;
+            top: 24px;
+        }
     </style>
 </head>
 <body>
-
+<header class="logo" >
+    <a href="{% url 'index' %}">“&nbsp;”</a>
+</header>
 {% block content %}
 
 {% endblock content %}
