@@ -12,7 +12,7 @@ admin.site.register(Person, PersonAdmin)
 
 class QuoteAdmin(admin.ModelAdmin):
     fieldsets = [
-        (None,               {'fields': ['quote_text','slug','source', 'topics', 'person']}),
+        (None,               {'fields': ['quote_text','slug','source', 'topics', 'person', 'date']}),
         ('Date information', {'fields': ['pub_date','updated_date'], 'classes': ['collapse']}),
     ]
 admin.site.register(Quote, QuoteAdmin)

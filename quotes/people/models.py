@@ -21,6 +21,7 @@ class Quote(models.Model):
     quote_text = models.TextField()
     source = models.TextField()
     topics = models.CharField(max_length=200)
+    date = models.CharField(max_length=5)
 
     pub_date = models.DateTimeField('date published', default=datetime.datetime.now())
     updated_date = models.DateTimeField(default=datetime.datetime.now())

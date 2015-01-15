@@ -2,7 +2,8 @@
 
 
 {% block content %}
-    <h1 class="quote">{{ quote.quote_text }}</h1>
-    <h2 class="person"><a href="{% url 'person_detail' person.id %}">{{ person.person_name }}</a></h2>
-    <small class="source">{{ quote.source|urlize }}</small>
+
+    <h1 class="quote {% if quote.quote_text|length > 100 %} long {% endif %}">{{ quote.quote_text }}</h1>
+    <h2 class="person">– <a href="{% url 'person_detail' person.id %}">{{ person.person_name }}</a></h2>
+    <small class="source">1. {{ quote.source|urlize }}</small>
 {% endblock content %}
